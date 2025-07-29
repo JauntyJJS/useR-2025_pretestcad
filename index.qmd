@@ -1,0 +1,519 @@
+--- 
+format:
+  revealjs:
+    theme: [custom.scss]
+    mainfont: "Lora"
+    code-line-numbers: true
+    code-annotations: false
+    code-overflow: scroll
+    controls: true
+    progress: true
+    #slide-number: true # slide number determined be no_logo_at_title_slide.js
+    scrollable: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    # logo: images/qr.png
+    pointer:
+      pointerSize: 24
+      color: '#32cd32'
+    include-after-body: no_logo_at_title_slide.js
+    # include-in-header:
+    #   text: |
+    #     <meta name="github-repo" content="JauntyJJS/RMedicine2025_pretestcad" />
+    #     <meta name="twitter:title" content="pretestcad - An R package for Pretest Probability for Coronary Artery Disease." />
+    #     <meta name="twitter:description" content="Presentation for R/Medicine 2025." />
+    #     <meta name="twitter:url" content="https://jauntyjjs.github.io/RMedicine2025_pretestcad" />
+    #     <meta name="twitter:image" content="https://raw.githubusercontent.com/JauntyJJS/RMedicine2025_pretestcad/main/share-card.png" />
+    #     <meta name="twitter:image:alt" content="Title slide of pretestcad - An R package for Pretest Probability for Coronary Artery Disease presented at R/Medicine 2025." />
+    #     <meta name="twitter:card" content="summary_large_image" />
+    #     <meta name="twitter:creator" content="@JauntyJJS" />
+    #     <meta name="twitter:site" content="@JauntyJJS" />
+    #     <meta property="og:title" content="pretestcad - An R package for Pretest Probability for Coronary Artery Disease." />
+    #     <meta property="og:description" content="Presentation for R/Medicine 2025." />
+    #     <meta property="og:url" content="https://jauntyjjs.github.io/RMedicine2025_pretestcad" />
+    #     <meta property="og:image" content="https://raw.githubusercontent.com/JauntyJJS/RMedicine2025_pretestcad/main/share-card.png" />
+    #     <meta property="og:image:alt" content="Title slide of pretestcad - An R package for Pretest Probability for Coronary Artery Disease presented at R/Medicine 2025." />
+    #     <meta property="og:site_name" content="R/Medicine 2025" />
+    #     <meta property="og:type" content="website" />
+    #     <meta property="og:locale" content="en_UK" />
+    #     <meta property="article:author" content="Jeremy Selva" />
+revealjs-plugins:
+  - pointer
+filters:
+  - code-fullscreen
+params:
+  show_table: TRUE
+---
+
+```{r}
+#| label: for presentation
+#| include: false
+
+library(fontawesome)
+library(knitr)
+library(yaml)
+library(rmarkdown)
+library(purrr)
+library(pretestcad)
+
+out_type <- knitr::opts_chunk$get("rmarkdown.pandoc.to")
+```
+
+<br><br>
+
+<h1> `pretestcad` </h1>
+
+<h2> An R package for Pretest Probability<br>for Coronary Artery Disease </h2>
+
+<hr>
+
+<h3> Jeremy Selva [`r fontawesome::fa(name = "linkedin", fill = "#0077ac")`](https://www.linkedin.com/in/jeremy-selva-085b9112a/){target="_blank"} </h3>
+
+@JauntyJJS [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS){target="_blank"} [`r fontawesome::fa(name = "fab fa-square-x-twitter", fill = "#000000")`](https://twitter.com/JauntyJJS){target="_blank"} [`r fontawesome::fa(name = "bluesky", fill = "#1084ff")`](https://bsky.app/profile/jauntyjjs.bsky.social){target="_blank"} [<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5f53e7;overflow:visible;position:relative;"><path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/></svg>](https://fosstodon.org/@JauntyJJS){target="_blank"} <br> [*https://jeremy-selva.netlify.app* `r fontawesome::fa(name = "link", fill = "#666666")`](https://jeremy-selva.netlify.app/){target="_blank"} <br> 
+
+For [useR! 2025 `r fontawesome::fa(name = "link", fill = "#666666")`](https://user2025.r-project.org/){target="_blank"} </h3>
+
+![](images/useR!_2025.png){.absolute top=330 right=20 width="50%" fig-alt="useR! 2025 Logo."}
+
+10 August 2025
+
+![](images/pretestcad.png){.absolute top=80 right=20 width="18%" fig-alt="Hex Sticker of pretestcad."}
+
+## What is Coronary Artery Disease (CAD) ?
+
+Coronary Artery Disease (CAD) happens when the coronary arteries from the heart become narrow or blocked by fatty deposits called plaque. This can lead to chest pain, shortness of breath or even heart attack.
+
+![](images/cad.jpg){fig-alt="Picture showing coronary arteries from the heart become narrow or blocked by fatty deposits called plaque." fig-align="center" width="70%"}
+
+[[Coronary Artery Disease for health education Infographic](https://www.freepik.com/free-vector/coronary-artery-disease-health-education-infographic_10139045.htm){target="_blank"} designed by [brgfx](https://www.freepik.com/author/brgfx){target="_blank"} from [Freepik](http://www.freepik.com){target="_blank"}]{style="font-size: 80%;"}.
+
+## Diagnosis of CAD
+
+Patient needs to go for many invasive, time consuming and expensive tests for diagnosis of CAD.
+
+![](images/diagnosis_of_coronary_artery_disease.jpg){fig-alt="Picture showing different tests for diagnosis of Coronary Artery Disease such as troponon blood test, electrocardiogram, echocardiogram, stress test, coronary calcium scan, computed tomography coronary angiogram and cardiac catherisation" fig-align="center" width="70%"}
+
+[Images from Pokharel, MD, B., & Dhakal, MD, B *The American Journal of Patient Health Info* 2024; 1(01) doi: [10.69512/ajphi.v1i01.37](https://doi.org/10.69512/ajphi.v1i01.37){target="_blank"}]{style="font-size: 70%;"}.
+
+## What is Pretest Probability ?
+
+Pretest probability is the estimated probability, given a set of risk factors (e.g Age, Sex, etc.), that a patient has a specific disease or condition before any diagnostic tests are performed. 
+
+It helps clinicians and doctors makes informed decision on which patients go for which diagnostic tests.
+
+![](images/esc_2024_guidelines.png){fig-alt="European Society of Cardiology (ESC) 2024 guidelines of first-line testing in symptomatic individuals with suspected chronic coronary syndrome." fig-align="center" width="70%"}
+
+[[European Society of Cardiology (ESC) 2024 guidelines](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"} of first-line testing in symptomatic individuals with suspected chronic coronary syndrome]{style="font-size: 60%;"}.
+
+## Pretest Probability Calculation
+
+Pretest probability of CAD may be presented in the form of a table or an online calculator where we calculate the probability for each patient.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/esc_2024.jpg){fig-alt="European Society of Cardiology (ESC) 2024 pretest probability for CAD table." fig-align="center" width="75%"}
+
+[Workflow from Vrints et al. *European Heart journal* 2024; 45(36):3415-3537 doi: [10.1093/eurheartj/ehae177](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"}]{style="font-size: 50%;"}.
+
+:::
+
+::: {.column width="50%"}
+
+![](images/cad_consortium_online.png){fig-alt="Online calculator to calculate pretest probability for CAD using the CAD Consortium cohort." fig-align="center" width="100%"}
+
+:::
+
+::::
+
+## Motivation
+
+As pretest models changes with time, it becomes tedious to calculate and update pretest probability one patient at a time.
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](images/overwhelmed.jpg){fig-alt="A girl lying on her desk feeling burntout." fig-align="center" width="100%"}
+
+[[Burntout girl](https://www.freepik.com/free-vector/hand-drawn-flat-design-overwhelmed-people-illustration_24683083.htm
+){target="_blank"} by [Freepik](https://www.freepik.com/author/freepik){target="_blank"}]{style="font-size: 80%;"}.
+
+:::
+
+::: {.column width="60%"}
+
+![](images/patients_queuing.jpg){fig-alt="Patients queuing up." fig-align="center" width="100%"}
+
+[[Crowd of people wearing face masks](https://www.freepik.com/free-vector/crowd-people-wearing-face-masks_8445486.htm){target="_blank"} designed by [Freepik](https://www.freepik.com/author/freepik){target="_blank"}]{style="font-size: 80%;"}.
+
+:::
+
+::::
+
+## Motivation
+
+There are many R packages for calculating risk for cardiovascular disease (CVD). 
+
+Why not create one for CAD ?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/motivated_guy.png){fig-alt="A motivated guy ready to start work." fig-align="center" width="75%"}
+
+[[Motivated guy ready to start work](https://www.freepik.com/free-vector/hand-drawn-college-entrance-exam-illustration_41156802.htm){target="_blank"} by [Freepik](https://www.freepik.com/author/freepik){target="_blank"}]{style="font-size: 80%;"}.
+
+:::
+
+::: {.column width="50%"}
+
+![](images/cvd_r_packages.png){fig-alt="R packages preventr, RiskScorecvd and globorisk to calculate risk of cardiovascular disease." fig-align="center" width="70%"}
+
+[R packages [preventr](https://martingmayer.com/preventr/){target="_blank"}, [RiskScorecvd](https://dvicencio.github.io/RiskScorescvd/){target="_blank"} and [globorisk](https://christopherbboyer.com/globorisk/){target="_blank"} to calculate risk of CVD.]{style="font-size: 80%;"}
+
+:::
+
+::::
+
+## `pretestcad`
+
+<https://jauntyjjs.github.io/pretestcad/>{target="_blank"}
+
+```{=html}
+<iframe width="1000" height="500" src="https://jauntyjjs.github.io/pretestcad/index.html" title="pretestcad Documentation" ></iframe>
+```
+
+## `pretestcad`
+
+```{r}
+#| label: esc 2024 risk score example 1
+#| echo: true
+
+# 30 female with symptom score of 3 and 0 risk factors
+calculate_esc_2024_fig_4_ptp(
+  age = 30,
+  sex = "female",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "no",
+  have_hypertension = "no",
+  have_diabetes = "no",
+  output = "percentage"
+)
+```
+![](images/esc_2024_table.jpg){fig-alt="ESC 2024 pretest probability of CAD table." fig-align="center" width="50%"}
+
+[ESC 2024 guidelines from Vrints et al. *European Heart journal* 2024; 45(36):3415-3537 doi: [10.1093/eurheartj/ehae177](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"}]{style="font-size: 70%;"}.
+
+## Robust to missing clinical data
+
+```{r}
+#| label: esc 2024 risk score example 2
+#| code-line-numbers: "|1,12"
+#| echo: true
+
+# 55 male with symptom score of 3 and 3 risk factors and 2 NA
+calculate_esc_2024_fig_4_ptp(
+  age = 55,
+  sex = "male",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = NA,
+  have_smoking_history = NA,
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "yes",
+  max_na_num_of_rf = 2,
+  output = "percentage"
+)
+```
+![](images/esc_2024_table.jpg){fig-alt="ESC 2024 pretest probability of CAD table." fig-align="center" width="70%"}
+
+[ESC 2024 guidelines from Vrints et al. *European Heart journal* 2024; 45(36):3415-3537 doi: [10.1093/eurheartj/ehae177](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"}]{style="font-size: 70%;"}.
+
+## Helpful error messages
+
+Applied this [talk](https://www.youtube.com/watch?v=uu8KHXgagug){target="_blank"} from useR! 2024 to write better error messages. 
+
+```{=html}
+<iframe width="1000" height="500" src="https://www.youtube.com/embed/uu8KHXgagug" frameborder="0" allowfullscreen></iframe>
+```
+
+## Helpful error messages
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score age not numeric error
+#| code-line-numbers: "|2"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = "Something Else",
+  sex = "male",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "yes",
+  output = "percentage"
+)
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score age not positive error
+#| code-line-numbers: "|2"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 0,
+  sex = "male",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "yes",
+  output = "percentage"
+)
+```
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score sex error with without partial mismatch
+#| code-line-numbers: "|3"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 50,
+  sex = "Something Else",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "yes",
+  output = "percentage"
+)
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score sex error with partial mismatch
+#| code-line-numbers: "|3"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 50,
+  sex = "ale",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "yes",
+  output = "percentage"
+)
+```
+
+:::
+
+:::
+
+::::
+
+## Flexible Labeling
+
+Applied this [talk](https://www.youtube.com/watch?v=pE3iZBegdr0){target="_blank"} from R/Medicine 2025 to include flexible labelling.
+
+```{=html}
+<iframe width="1000" height="500" src="https://www.youtube.com/embed/pE3iZBegdr0" frameborder="0" allowfullscreen></iframe>
+```
+
+## Flexible Labeling
+
+![](images/label_female.png){fig-alt="Use of parameters label_sex_female for flexible labelling of female." fig-align="center" width="100%"}
+
+
+
+## Flexible Labeling
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score with flexible labeling
+#| code-line-numbers: "|3,5,10,12,13,14"
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 50,
+  sex = "男性",
+  chest_pain_type = "typical",
+  have_dyspnoea = "tidak",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "ஆம்",
+  output = "percentage",
+  label_sex_male = c("male", "男性", "男人"),
+  label_have_dyspnoea_no = c("no", "tidak"),
+  label_have_diabetes_yes = c("yes", "ஆம்", "ஆமாம்") 
+)
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score with invalid sex input with flexible labelling
+#| code-line-numbers: "|3"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 50,
+  sex = "女性性",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "no",
+  output = "percentage",
+  label_sex_male = c("male", "男性", "男人"),
+  label_sex_female = c("female", "女性", "女人"),
+  label_sex_unknown = c("NIL", NA, NaN)
+)
+```
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+
+```{r}
+#| label: esc 2024 risk score with invalid flexible labelling
+#| code-line-numbers: "|12,13,14"
+#| error: true
+#| echo: true
+
+calculate_esc_2024_fig_4_ptp(
+  age = 50,
+  sex = "male",
+  chest_pain_type = "typical",
+  have_dyspnoea = "no",
+  have_family_history = "no",
+  have_smoking_history = "no",
+  have_dyslipidemia = "yes",
+  have_hypertension = "yes",
+  have_diabetes = "no",
+  output = "percentage",
+  label_sex_male = c("Anything", "male", "男性", "男人", "随便"),
+  label_sex_female = c("Anything", "male", "女性", "女人"),
+  label_sex_unknown = c("Anything", "NIL", NA, NaN, "随便")
+)
+```
+
+:::
+
+:::
+
+::::
+
+## Use of `purrr`
+
+```{r}
+#| label: esc 2024 risk score example 3
+#| code-line-numbers: "|16-36"
+#| echo: true
+
+patient_data <- tibble::tribble(
+    ~unique_id,
+    ~age,     ~sex, 
+    ~chest_pain_type, ~have_dyspnoea, 
+    ~have_family_history, ~have_smoking_history, ~have_dyslipidemia, ~have_hypertension, ~have_diabetes,
+    "45 year old male with typical chest pain, no dyspnoea, hypertension and diabetes",
+    45, "male", 
+    "typical", "no",  
+    "no", "no", "no", "yes", "yes",
+    "70 year old female with no chest pain, dyspnoea, have smoking history (past or current smoker) and dyslipidemia",
+    70, "female", 
+    "no chest pain", "yes",  
+    "no", "yes", "yes", "no", "no"
+)
+
+risk_data <- patient_data |>
+    dplyr::mutate(
+      esc_2024_ptp_percent = purrr::pmap_chr(
+        .l = list(
+          age = .data[["age"]],
+          sex = .data[["sex"]],
+          chest_pain_type = .data[["chest_pain_type"]],
+          have_dyspnoea = .data[["have_dyspnoea"]],
+          have_family_history = .data[["have_family_history"]],
+          have_smoking_history = .data[["have_smoking_history"]],
+          have_dyslipidemia = .data[["have_dyslipidemia"]],
+          have_hypertension = .data[["have_hypertension"]],
+          have_diabetes = .data[["have_diabetes"]],
+          output = "percentage"
+        ),
+        .f = pretestcad::calculate_esc_2024_fig_4_ptp
+      )
+    ) |> 
+   dplyr::select(
+      c("unique_id", "esc_2024_ptp_percent")
+   )
+
+print(risk_data)
+```
+
+## Thank you
+
+Available on [CRAN](https://cran.r-project.org/web/packages/pretestcad/index.html){target="_blank"}, [RUniverse](https://jauntyjjs.r-universe.dev/pretestcad){target="_blank"} and [Github](https://github.com/JauntyJJS/pretestcad){target="_blank"}.
+
+![](images/great_expectations.png){fig-alt="Comic howing too many bugs to fix during first day of release." fig-align="center" width="60%"}
+
+[[Great Expectations](https://www.monkeyuser.com/2019/great-expectations/){target="_blank"} from [MonkeyUser.com](https://www.monkeyuser.com/){target="_blank"}]{style="font-size: 70%;"}
