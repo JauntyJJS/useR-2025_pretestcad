@@ -2,7 +2,7 @@
 format:
   revealjs:
     theme: [custom.scss]
-    mainfont: "Lora"
+    mainfont: "Lato"
     code-line-numbers: true
     code-annotations: false
     code-overflow: scroll
@@ -82,7 +82,13 @@ For [useR! 2025 `r fontawesome::fa(name = "link", fill = "#666666")`](https://us
 
 ## What is Coronary Artery Disease (CAD) ?
 
-Coronary Artery Disease (CAD) happens when the coronary arteries from the heart become narrow or blocked by fatty deposits called plaque. This can lead to chest pain, shortness of breath or even heart attack.
+::: {style="font-size: 80%;"}
+
+Coronary Artery Disease (CAD) happens when the coronary arteries from the heart become narrow or blocked by fatty deposits called plaque. 
+
+This can lead to chest pain, shortness of breath or even heart attack.
+
+:::
 
 ![](images/cad.jpg){fig-alt="Picture showing coronary arteries from the heart become narrow or blocked by fatty deposits called plaque." fig-align="center" width="70%"}
 
@@ -98,7 +104,7 @@ Patient needs to go for many invasive, time consuming and expensive tests for di
 
 ## What is Pretest Probability ?
 
-Pretest probability is the estimated probability, given a set of risk factors (e.g Age, Sex, etc.), that a patient has a specific disease or condition before any diagnostic tests are performed. 
+Pretest probability is the estimated probability, given a set of risk factors (e.g age, sex, etc.), that a patient has a specific disease or condition before any diagnostic tests are performed. 
 
 It helps clinicians and doctors makes informed decision on which patients go for which diagnostic tests.
 
