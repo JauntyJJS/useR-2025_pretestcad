@@ -1,0 +1,8 @@
+---
+title: pretestcad - An R package for Pretest Probability for CAD
+format: gfm
+---
+
+Here are the [source code](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} for my [slides](https://jauntyjjs.github.io/useR-2025_pretestcad/){target="_blank"} presented at [useR! 2025](https://user2025.r-project.org/){target="_blank"}.
+
+![](share-card.png){fig-alt="Title slide of pretestcad - An R package for Pretest Probability for Coronary Artery Disease presented at R/Medicine 2025." fig-align="center"}
