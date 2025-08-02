@@ -94,6 +94,13 @@ This can lead to chest pain, shortness of breath or even heart attack.
 
 [[Coronary Artery Disease for health education Infographic](https://www.freepik.com/free-vector/coronary-artery-disease-health-education-infographic_10139045.htm){target="_blank"} designed by [brgfx](https://www.freepik.com/author/brgfx){target="_blank"} from [Freepik](http://www.freepik.com){target="_blank"}]{style="font-size: 80%;"}.
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Diagnosis of CAD
 
 Patient needs to go for many invasive, time consuming and expensive tests for diagnosis of CAD.
@@ -101,6 +108,13 @@ Patient needs to go for many invasive, time consuming and expensive tests for di
 ![](images/diagnosis_of_coronary_artery_disease.jpg){fig-alt="Picture showing different tests for diagnosis of Coronary Artery Disease such as troponon blood test, electrocardiogram, echocardiogram, stress test, coronary calcium scan, computed tomography coronary angiogram and cardiac catherisation" fig-align="center" width="70%"}
 
 [Images from Pokharel, MD, B., & Dhakal, MD, B *The American Journal of Patient Health Info* 2024; 1(01) doi: [10.69512/ajphi.v1i01.37](https://doi.org/10.69512/ajphi.v1i01.37){target="_blank"}]{style="font-size: 70%;"}.
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## What is Pretest Probability ?
 
@@ -111,6 +125,13 @@ It helps clinicians and doctors makes informed decision on which patients go for
 ![](images/esc_2024_guidelines.png){fig-alt="European Society of Cardiology (ESC) 2024 guidelines of first-line testing in symptomatic individuals with suspected chronic coronary syndrome." fig-align="center" width="70%"}
 
 [[European Society of Cardiology (ESC) 2024 guidelines](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"} of first-line testing in symptomatic individuals with suspected chronic coronary syndrome]{style="font-size: 60%;"}.
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Pretest Probability Calculation
 
@@ -133,6 +154,13 @@ Pretest probability of CAD may be presented in the form of a table or an online 
 :::
 
 ::::
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Motivation
 
@@ -158,6 +186,13 @@ As pretest models changes with time, it becomes tedious to calculate and update 
 :::
 
 ::::
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Motivation
 
@@ -185,6 +220,13 @@ Why not create one for CAD ?
 
 ::::
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## `pretestcad`
 
 <https://jauntyjjs.github.io/pretestcad/>{target="_blank"}
@@ -192,6 +234,13 @@ Why not create one for CAD ?
 ```{=html}
 <iframe width="1000" height="500" src="https://jauntyjjs.github.io/pretestcad/index.html" title="pretestcad Documentation" ></iframe>
 ```
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Usage Example
 
@@ -216,6 +265,13 @@ calculate_esc_2024_fig_4_ptp(
 ![](images/esc_2024_table.jpg){fig-alt="ESC 2024 pretest probability of CAD table." fig-align="center" width="50%"}
 
 [ESC 2024 guidelines from Vrints et al. *European Heart journal* 2024; 45(36):3415-3537 doi: [10.1093/eurheartj/ehae177](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"}]{style="font-size: 70%;"}.
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Robust to missing clinical data
 
@@ -243,6 +299,13 @@ calculate_esc_2024_fig_4_ptp(
 
 [ESC 2024 guidelines from Vrints et al. *European Heart journal* 2024; 45(36):3415-3537 doi: [10.1093/eurheartj/ehae177](https://doi.org/10.1093/eurheartj/ehae177){target="_blank"}]{style="font-size: 70%;"}.
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Helpful error messages
 
 Applied this [talk](https://www.youtube.com/watch?v=uu8KHXgagug){target="_blank"} from useR! 2024 to write better error messages. 
@@ -250,6 +313,13 @@ Applied this [talk](https://www.youtube.com/watch?v=uu8KHXgagug){target="_blank"
 ```{=html}
 <iframe width="1000" height="500" src="https://www.youtube.com/embed/uu8KHXgagug" frameborder="0" allowfullscreen></iframe>
 ```
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Helpful error messages
 
@@ -361,6 +431,13 @@ calculate_esc_2024_fig_4_ptp(
 
 ::::
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Use of `purrr`
 
 ```{r}
@@ -408,6 +485,13 @@ risk_data <- patient_data |>
 print(risk_data)
 ```
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Flexible Labeling (Development Version)
 
 Applied this [talk](https://www.youtube.com/watch?v=pE3iZBegdr0){target="_blank"} from R/Medicine 2025 to include flexible labelling.
@@ -416,11 +500,23 @@ Applied this [talk](https://www.youtube.com/watch?v=pE3iZBegdr0){target="_blank"
 <iframe width="1000" height="500" src="https://www.youtube.com/embed/pE3iZBegdr0" frameborder="0" allowfullscreen></iframe>
 ```
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Flexible Labeling (Development Version)
 
 ![](images/label_female.png){fig-alt="Use of parameters label_sex_female for flexible labelling of female." fig-align="center" width="100%"}
 
+::: footer
 
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
 
 ## Flexible Labeling (Development Version)
 
@@ -516,6 +612,13 @@ calculate_esc_2024_fig_4_ptp(
 
 ::::
 
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
+
 ## Thank you
 
 Available on [CRAN](https://cran.r-project.org/web/packages/pretestcad/index.html){target="_blank"}, [RUniverse](https://jauntyjjs.r-universe.dev/pretestcad){target="_blank"} and [Github](https://github.com/JauntyJJS/pretestcad){target="_blank"}.
@@ -523,3 +626,10 @@ Available on [CRAN](https://cran.r-project.org/web/packages/pretestcad/index.htm
 ![](images/great_expectations.png){fig-alt="Comic howing too many bugs to fix during first day of release." fig-align="center" width="60%"}
 
 [[Great Expectations](https://www.monkeyuser.com/2019/great-expectations/){target="_blank"} from [MonkeyUser.com](https://www.monkeyuser.com/){target="_blank"}]{style="font-size: 70%;"}
+
+::: footer
+
+[https://jauntyjjs.github.io/useR-2025_pretestcad
+`r fontawesome::fa(name = "link", fill = "#666666")`](https://jauntyjjs.github.io/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "github", fill = "#000000")`](https://github.com/JauntyJJS/useR-2025_pretestcad){target="_blank"} [`r fontawesome::fa(name = "file-pdf", fill = "#b50b00")`](https://raw.githubusercontent.com/JauntyJJS/useR-2025_pretestcad/main/index.pdf){target="_blank"}
+
+:::
