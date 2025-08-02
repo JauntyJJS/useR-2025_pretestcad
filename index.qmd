@@ -12,7 +12,7 @@ format:
     scrollable: true
     transition: fade
     background-transition: fade
-    highlight-style: ayu-mirage
+    highlight-style: arrow-dark
     # logo: images/qr.png
     pointer:
       pointerSize: 24
@@ -193,7 +193,7 @@ Why not create one for CAD ?
 <iframe width="1000" height="500" src="https://jauntyjjs.github.io/pretestcad/index.html" title="pretestcad Documentation" ></iframe>
 ```
 
-## `pretestcad`
+## Usage Example
 
 ```{r}
 #| label: esc 2024 risk score example 1
@@ -361,7 +361,54 @@ calculate_esc_2024_fig_4_ptp(
 
 ::::
 
-## Flexible Labeling
+## Use of `purrr`
+
+```{r}
+#| label: esc 2024 risk score example 3
+#| code-line-numbers: "|16-36"
+#| echo: true
+
+patient_data <- tibble::tribble(
+    ~unique_id,
+    ~age,     ~sex, 
+    ~chest_pain_type, ~have_dyspnoea, 
+    ~have_family_history, ~have_smoking_history, ~have_dyslipidemia, ~have_hypertension, ~have_diabetes,
+    "45 year old male with typical chest pain, no dyspnoea, hypertension and diabetes",
+    45, "male", 
+    "typical", "no",  
+    "no", "no", "no", "yes", "yes",
+    "70 year old female with no chest pain, dyspnoea, have smoking history (past or current smoker) and dyslipidemia",
+    70, "female", 
+    "no chest pain", "yes",  
+    "no", "yes", "yes", "no", "no"
+)
+
+risk_data <- patient_data |>
+    dplyr::mutate(
+      esc_2024_ptp_percent = purrr::pmap_chr(
+        .l = list(
+          age = .data[["age"]],
+          sex = .data[["sex"]],
+          chest_pain_type = .data[["chest_pain_type"]],
+          have_dyspnoea = .data[["have_dyspnoea"]],
+          have_family_history = .data[["have_family_history"]],
+          have_smoking_history = .data[["have_smoking_history"]],
+          have_dyslipidemia = .data[["have_dyslipidemia"]],
+          have_hypertension = .data[["have_hypertension"]],
+          have_diabetes = .data[["have_diabetes"]],
+          output = "percentage"
+        ),
+        .f = pretestcad::calculate_esc_2024_fig_4_ptp
+      )
+    ) |> 
+   dplyr::select(
+      c("unique_id", "esc_2024_ptp_percent")
+   )
+
+print(risk_data)
+```
+
+## Flexible Labeling (Development Version)
 
 Applied this [talk](https://www.youtube.com/watch?v=pE3iZBegdr0){target="_blank"} from R/Medicine 2025 to include flexible labelling.
 
@@ -369,13 +416,13 @@ Applied this [talk](https://www.youtube.com/watch?v=pE3iZBegdr0){target="_blank"
 <iframe width="1000" height="500" src="https://www.youtube.com/embed/pE3iZBegdr0" frameborder="0" allowfullscreen></iframe>
 ```
 
-## Flexible Labeling
+## Flexible Labeling (Development Version)
 
 ![](images/label_female.png){fig-alt="Use of parameters label_sex_female for flexible labelling of female." fig-align="center" width="100%"}
 
 
 
-## Flexible Labeling
+## Flexible Labeling (Development Version)
 
 :::: {.columns}
 
@@ -468,53 +515,6 @@ calculate_esc_2024_fig_4_ptp(
 :::
 
 ::::
-
-## Use of `purrr`
-
-```{r}
-#| label: esc 2024 risk score example 3
-#| code-line-numbers: "|16-36"
-#| echo: true
-
-patient_data <- tibble::tribble(
-    ~unique_id,
-    ~age,     ~sex, 
-    ~chest_pain_type, ~have_dyspnoea, 
-    ~have_family_history, ~have_smoking_history, ~have_dyslipidemia, ~have_hypertension, ~have_diabetes,
-    "45 year old male with typical chest pain, no dyspnoea, hypertension and diabetes",
-    45, "male", 
-    "typical", "no",  
-    "no", "no", "no", "yes", "yes",
-    "70 year old female with no chest pain, dyspnoea, have smoking history (past or current smoker) and dyslipidemia",
-    70, "female", 
-    "no chest pain", "yes",  
-    "no", "yes", "yes", "no", "no"
-)
-
-risk_data <- patient_data |>
-    dplyr::mutate(
-      esc_2024_ptp_percent = purrr::pmap_chr(
-        .l = list(
-          age = .data[["age"]],
-          sex = .data[["sex"]],
-          chest_pain_type = .data[["chest_pain_type"]],
-          have_dyspnoea = .data[["have_dyspnoea"]],
-          have_family_history = .data[["have_family_history"]],
-          have_smoking_history = .data[["have_smoking_history"]],
-          have_dyslipidemia = .data[["have_dyslipidemia"]],
-          have_hypertension = .data[["have_hypertension"]],
-          have_diabetes = .data[["have_diabetes"]],
-          output = "percentage"
-        ),
-        .f = pretestcad::calculate_esc_2024_fig_4_ptp
-      )
-    ) |> 
-   dplyr::select(
-      c("unique_id", "esc_2024_ptp_percent")
-   )
-
-print(risk_data)
-```
 
 ## Thank you
 

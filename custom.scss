@@ -15,7 +15,7 @@ $presentation-h3-font-size: 2.5rem !default;
 $link-color: #263b8c;
 
 // colors
-$body-bg: #fffceb !default;
+$body-bg: #fef4f9 !default;
 
 //code
 $font-family-monospace: 'Fira Mono', monospace  !default;
@@ -70,7 +70,7 @@ $code-block-bg: #1f2430;
 .reveal pre.sourceCode code {
   /* default height: 500px; */
   max-height: 350px;
-  colour: #ffffff;
+  //background-color: #ffffff;
   border-left: 12px solid #286ab8;
 }
 
@@ -87,7 +87,7 @@ $code-block-bg: #1f2430;
 
 .reveal pre code {
   background-color: #ffffff;
-  border-left: 12px solid #3570b6;
+  border-left: 12px solid #B3B3B3;
   max-height: 500px;
 }
 
